@@ -20,20 +20,6 @@
     box-sizing: content-box;
 }
 
-._ibg {
-    position: relative;
-}
-
-._ibg img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    -o-object-fit: cover;
-    object-fit: cover;
-}
-
 /* ---PAGE------------------------------------------------------------------------- */
 .main {
     -webkit-box-flex: 1;
@@ -45,6 +31,7 @@
 .main_information {
     position: relative;
     z-index: 1;
+    /* margin: -111px 0px 0px 0px; */
 }
 
 .page__clients:not(:last-child) {
@@ -61,7 +48,7 @@
     line-height: 142%;
     font-weight: 700;
     font-size: 48px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 25px;
 }
 
@@ -97,48 +84,67 @@
         margin-top: 80px;
     }
 }
-
-.table {
-    margin: 0 auto;
-    width: 95%;
-    overflow-y: auto;
-    border-collapse: collapse;
-    -webkit-box-shadow: -1px -1px 10px gray;
-    box-shadow: -1px -1px 10px gray;
+.main-text {
+    display: flex;
+    justify-content: flex-end;
 }
-
-thead {
-    background-color: #4743FF;
+.letter {
+    width: 80%;
 }
-
-.table tr:not(:last-child) {
+.wrap {
+    padding-bottom: 20px;
     border-bottom: 1px dashed gray;
 }
-
-.table tbody tr:hover {
-    background-color: #bae3f083;
-    cursor: pointer;
-}
-
-.table th, .table td {
-    font-size: 15px;
+.you_can {
+    font-size: 20px;
     text-align: center;
-    padding: 20px;
+    margin-bottom: 20px;
 }
-
-@media (max-width: 957px) {
-    .table-wrap {
-        overflow-x: auto;
-    }
-    /* table th {
-        display: none;
-    }
-    table tr {
-        display: flex;
-        flex-direction: column;
-    }
-    table tr td:nth-child(2), table tr td:nth-child(3) {
-        background-color: #4743FF;
-        column-span: 2;
-    } */
+.ul {
+    display: flex;
+    justify-content: flex-start;
+}
+.ul li {
+    font-size: 15px;
+}
+.address li::before {
+    content: "—";
+    color:blue;
+    line-height: 150%;
+    margin-right: 20px;
+}
+.tel {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 12px;
+}
+.title {
+    font-size: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+.info {
+    margin-top: 10px;
+    text-align: left;
+}
+.information {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed gray;
+}
+.information__title {
+    font-size: 15px;
+    font-weight: bold;
+}
+.information__item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.number {
+    justify-content: start;
+    font-size: 30px;
+    color: gold;
+    font-weight: bold;
+    margin-right: 20%;
 }
